@@ -1,0 +1,14 @@
+.container{
+    text-align: center;
+}
+.center{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.col{
+    text-align: center;
+}
+.row{
+    text-align: center;
+}

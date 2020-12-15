@@ -1,0 +1,28 @@
+<nav class="row">
+    <input type="text" placeholder="Search" (ngModelChange)="Search()">
+  </nav><br>
+  <table border="3" class="center">
+    <tr>
+      <th>TeamNAme</th>
+      <th>Wins</th> 
+      <th>Losses</th>
+      <th>Ties</th>
+      <th>Scores</th>
+    </tr>
+    <tr *ngFor="let item of data | paginate:{itemsPerPage:20,currentPage:p}">
+      <td>{{item.team_name}}</td>
+      <td>{{item.wins}}</td>
+      <td>{{item.losses}}</td>
+      <td>{{item.ties}}</td>
+      <td>{{item.score}}</td>
+    </tr>
+  </table>
+  <br>
+  <div class="col">
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+  </div>
+  <br>
+  <div class="container">
+    <button type="button">Add</button>&nbsp;
+    <button type="button">Compare</button>
+  </div>
